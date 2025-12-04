@@ -25,7 +25,7 @@ if (form) {
                       `📱 *Teléfono:* ${contacto}%0A` +
                       `💐 *Pedido/Consulta:* ${mensaje}`;
 
-        const url = `https://wa.me/${TELEFONO_FLORERIA}?text=${texto}`;
+        const url = `https://wa.me/+5493814744343?text=${texto}`;
         
         setTimeout(() => {
             window.open(url, '_blank');
