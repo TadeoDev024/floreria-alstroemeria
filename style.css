@@ -1,0 +1,139 @@
+/* --- style.css --- */
+:root {
+  --primary: #be185d;   /* Rosa Magenta Elegante */
+  --primary-dark: #831843;
+  --accent: #10b981;    /* Verde Esmeralda (Naturaleza) */
+  --text-dark: #374151;
+  --bg-light: #fdf2f8;  /* Fondo Rosa Muy Pálido */
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Lato', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); }
+
+/* Tipografía Especial */
+h1, h2, h3, .logo, .hero h1 { font-family: 'Playfair Display', serif; }
+
+/* Navbar */
+.navbar { background: rgba(255, 255, 255, 0.95); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; color: var(--primary-dark); font-weight: 700; letter-spacing: 0.5px; }
+.logo span { color: var(--accent); font-style: italic; }
+.nav-links { list-style: none; display: flex; gap: 25px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 400; transition: color 0.3s; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+.nav-links a:hover { color: var(--primary); }
+.btn-nav { background: var(--primary); color: white !important; padding: 10px 25px; border-radius: 50px; font-weight: 500; transition: all 0.3s; }
+.btn-nav:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+/* Hero */
+.hero { 
+  background: url('https://images.unsplash.com/photo-1490750967868-58cb75069ed6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; 
+  height: 85vh; 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  color: white; 
+  text-align: center; /* Centrado para estética floral */
+  justify-content: center;
+}
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); }
+.hero-content { position: relative; z-index: 1; max-width: 800px; padding: 20px; }
+.hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.hero p { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.95; font-weight: 300; }
+
+/* Botones */
+.btn { display: inline-block; padding: 14px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: all 0.3s; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;}
+.btn-primary { background: var(--primary); color: white; box-shadow: 0 4px 14px rgba(190, 24, 93, 0.4); }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+.btn-outline { border: 2px solid white; color: white; margin-left: 15px; background: transparent; }
+.btn-outline:hover { background: white; color: var(--primary-dark); }
+.btn-block { width: 100%; display: block; border-radius: 8px; margin-left: 0; }
+
+/* Secciones */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 90px 0; }
+.bg-light { background: var(--bg-light); }
+.section-title { text-align: center; margin-bottom: 60px; }
+.section-title h2 { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 15px; }
+.underline { width: 60px; height: 3px; background: var(--accent); margin: 0 auto; }
+
+/* Grid de Servicios/Productos */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.service-card { background: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; overflow: hidden;}
+.service-card:hover { transform: translateY(-5px); }
+.card-image img { width: 100%; height: 220px; object-fit: cover; }
+.card-text { padding: 25px; text-align: center; }
+.service-card h3 { color: var(--primary-dark); margin-bottom: 10px; font-size: 1.4rem; }
+.service-card p { color: #666; font-size: 0.95rem; }
+
+/* Nosotros */
+.about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-image img { width: 100%; border-radius: 8px; box-shadow: 0 20px 40px rgba(190, 24, 93, 0.15); }
+.check-list { list-style: none; margin-top: 25px; }
+.check-list li { margin-bottom: 12px; font-weight: 500; color: var(--text-dark); display: flex; align-items: center; gap: 10px; }
+.check-list li::before { content: "✿"; color: var(--primary); font-weight: bold; font-size: 1.2rem; }
+
+/* Contacto */
+.contact-section { background: url('https://www.transparenttextures.com/patterns/cubes.png'); }
+.contact-wrapper { max-width: 550px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-top: 5px solid var(--primary); }
+.form-group { margin-bottom: 20px; }
+input, textarea { width: 100%; padding: 14px; border: 1px solid #e5e7eb; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border 0.3s; background: #f9fafb; }
+input:focus, textarea:focus { border-color: var(--primary); outline: none; background: white; }
+
+/* Footer */
+footer { background: #1f2937; color: rgba(255,255,255,0.8); padding: 60px 0 20px; text-align: center; }
+.footer-logo { font-size: 2.2rem; color: white; margin-bottom: 20px; letter-spacing: 0.5px; display: inline-block; }
+.footer-info { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; align-items: center; }
+.footer-info p { margin: 0; font-size: 1rem; }
+.footer-info a { color: white; text-decoration: none; transition: color 0.3s; }
+.footer-info a:hover { color: var(--primary); }
+.footer-copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .about-container { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+.hero { 
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+              url('./image/arreglo-floral-de-nardi-1.jpg');
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  color: white; 
+  position: relative;
+}
+/* --- Corrección de Imágenes del Catálogo --- */
+
+/* 1. Ajustamos el contenedor de la imagen */
+.service-card .card-image {
+  height: 300px; /* Antes era 220px. Lo hacemos más alto para que entren los ramos verticales */
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #f3f4f6; /* Un borde sutil abajo */
+}
+
+/* 2. Ajustamos la foto en sí */
+.service-card .card-image img {
+  width: 100%;
+  height: 100%;
+  
+  /* Esto es la CLAVE: */
+  object-fit: cover;      /* Rellena el espacio sin estirar la foto */
+  object-position: center top; /* Alinea la imagen un poco hacia arriba (donde suelen estar las flores) */
+  
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto extra: Zoom suave al pasar el mouse */
+.service-card:hover .card-image img {
+  transform: scale(1.05);
+}

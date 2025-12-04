@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florería Alstroemeria - Tucumán</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Alstroe<span>meria</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto" class="btn-nav">Hacer Pedido</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Dilo con Flores</h1>
+      <p>Arreglos florales únicos para momentos inolvidables. Envíos a domicilio en San Miguel de Tucumán y Yerba Buena.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn btn-primary">Encargar Ahora</a>
+        <a href="#catalogo" class="btn btn-outline">Ver Diseños</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="catalogo" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestras Creaciones</h2>
+        <div class="underline"></div>
+        <p style="margin-top: 10px; color: #666;">Flores frescas seleccionadas cada mañana</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./image/2025-07-03.webp" alt="Ramos">
+          </div>
+          <div class="card-text">
+            <h3>Ramos Románticos</h3>
+            <p>La clásica elegancia de las rosas rojas, peonías y mix de estación para enamorar.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./image/2025-07-03 (1).webp" alt="Centros de Mesa">
+          </div>
+          <div class="card-text">
+            <h3>Decoración de Eventos</h3>
+            <p>Centros de mesa y ambientación floral para casamientos, 15 años y cenas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./image/unnamed (1).webp" alt="Regalos">
+          </div>
+          <div class="card-text">
+            <h3>Cajas & Desayunos</h3>
+            <p>Flower boxes combinadas con chocolates y detalles dulces para sorprender.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="section bg-light">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>Pasión por los Detalles</h2>
+        <p class="lead"><strong>En Alstroemeria creamos emociones a través de la naturaleza.</strong></p>
+        <p>Somos una florería boutique en el corazón de Tucumán. Entendemos que cada ramo lleva un mensaje, por eso cuidamos la frescura y presentación de cada tallo.</p>
+        <ul class="check-list">
+          <li> Envíos en el día (pedidos antes de las 11hs).</li>
+          <li> Flores exóticas y de estación.</li>
+          <li> Tarjetería personalizada incluida.</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="./image/unnamed.jpg" alt="Florista trabajando">
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Envía Flores Hoy</h2>
+        <p>Completa tus datos y coordinamos el pago y entrega por WhatsApp.</p>
+      </div>
+      <div class="contact-wrapper">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="nombre" placeholder="Tu Nombre Completo" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="contacto" placeholder="Tu Celular (para contactarte)" required>
+          </div>
+          <div class="form-group">
+            <textarea id="mensaje" rows="4" placeholder="Cuéntanos: ¿Qué tipo de flores buscas? ¿Para qué fecha?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span style="font-size:1.1rem; vertical-align:middle; margin-right:5px;">🍃</span> Enviar Pedido a WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Alstroe<span>meria</span></div>
+        <div class="footer-info">
+            <p>📍 José Colombres 24, San Miguel de Tucumán</p>
+            <p>📱 <a href="https://wa.me/5493814644817" target="_blank">381 464-4817</a></p>
+            <p>✉️ <a href="mailto:hola@alstroemeria.com.ar">hola@alstroemeria.com.ar</a></p>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2025 Florería Alstroemeria. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="chat-toggle-btn" onclick="toggleChat()" title="Asistente Floral"></button>
+
+  <div id="chat-widget" class="chat-widget-container">
+    <div class="chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+          <div class="avatar-small"></div>
+          <div class="chat-header-info">
+              <h4>Florista Virtual</h4>
+              <span>Ayudando ahora</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chatWindow">
+      <div class="message bot">
+        <strong>¡Hola! 🌸 Bienvenida a Alstroemeria.</strong><br><br>
+        Soy tu asistente floral. ¿Buscas un regalo para una ocasión especial o decoración?<br><br>
+        <em>Cuéntame para quién son las flores.</em>
+      </div>
+    </div>
+
+    <form class="chat-input-area" id="chatFormWidget">
+      <input type="text" id="userMsgWidget" placeholder="Escribe tu consulta..." autocomplete="off">
+      <button type="submit">➤</button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>
