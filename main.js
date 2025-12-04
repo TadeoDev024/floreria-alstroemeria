@@ -1,7 +1,7 @@
 // --- main.js ---
 
 // TU NÚMERO DE WHATSAPP (Cámbialo al de la Florería)
-const TELEFONO_FLORERIA = "5493814644817"; 
+const TELEFONO_FLORERIA = "+5493814744343"; 
 
 const form = document.getElementById('contactForm');
 
